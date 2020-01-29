@@ -4,13 +4,13 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "redis/instrumentation/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "redis-instrumentation"
+  spec.name          = "redis-instrumentation-dox-fork"
   spec.version       = RedisInstrumentation::VERSION
-  spec.authors       = ["SignalFx, Inc."]
-  spec.email         = ["info@signalfx.com"]
+  spec.authors       = ["SignalFx, Inc.", "Doximity"]
+  spec.email         = ["ops@doximity.com"]
 
   spec.summary       = %q{OpenTracing instrumentation for the Redis Ruby client.}
-  spec.homepage      = "https://github.com/signalfx/ruby-redis-instrumentation"
+  spec.homepage      = "https://github.com/doximity/ruby-redis-instrumentation"
   spec.license       = "Apache-2.0"
 
   # Specify which files should be added to the gem when it is released.
@@ -22,8 +22,8 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "opentracing", "> 0.3"
-  spec.add_development_dependency "bundler", "~> 1.16"
+  spec.add_dependency "opentracing", ">= 0.3.1"
+  spec.add_development_dependency "bundler", "~> 2.1.4"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
   spec.add_development_dependency "appraisal", "~> 2.2"
