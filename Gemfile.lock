@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    redis-instrumentation-dox-fork (0.2.0.doximity1)
+    redis-instrumentation-dox-fork (0.1.2.doximity1)
       opentracing (>= 0.3.1)
 
 GEM

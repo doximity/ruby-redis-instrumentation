@@ -43,7 +43,7 @@ RSpec.describe Redis::Instrumentation do
           'db.type' => 'redis',
           'db.instance' => 0,
           'peer.address' => 'redis://localhost:6379',
-          'db.statement' => 'set foo bar'
+          # 'db.statement' => 'set foo bar'
         }
         expect(span_tags).to eq expected_tags
       end
@@ -78,7 +78,7 @@ RSpec.describe Redis::Instrumentation do
           'db.type' => 'redis',
           'db.instance' => 0,
           'peer.address' => 'redis://localhost:6379',
-          'db.statement' => 'multi, set foo bar, incr baz, exec'
+          # 'db.statement' => 'multi, set foo bar, incr baz, exec'
         }
         expect(span_tags).to eq expected_tags
       end
